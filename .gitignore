@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
+constants.js
+utils/constants.js
 package-lock.json

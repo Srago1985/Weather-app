@@ -1,10 +1,12 @@
-const Weather = ({ weatherData = {} }) => {
+import type { WeatherProps } from './types/weather'
+
+const Weather = ({ weatherData = {} }: WeatherProps) => {
   if (weatherData?.error) {
     return (
       <div className={"error"}>
         <p style={{ color: "red" }}>Ошибка: {weatherData.error}</p>
       </div>
-    );
+    )
   }
 
   return (
@@ -35,7 +37,7 @@ const Weather = ({ weatherData = {} }) => {
           : "-"}
       </p>
     </div>
-  );
+  )
 };
 
 export default Weather;

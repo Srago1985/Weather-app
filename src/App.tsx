@@ -4,9 +4,7 @@ import './index.css'
 import Info from './Info'
 import Data from './Data'
 
-function App() {
-
-
+const App = () => {
   return (
     <div className={'wrapper'}>
       <div className={'main'}>
@@ -21,10 +19,7 @@ function App() {
           </div>
         </div>
       </div>
-      
-      
     </div>
-    
   )
 }
 
