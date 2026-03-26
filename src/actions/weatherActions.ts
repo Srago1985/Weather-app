@@ -25,7 +25,7 @@ export const fetchWeather = (city: string) => {
             )
             const data = await response.json()
             if (!response.ok) {
-                dispatch(setError(data.message || 'Город не найден'))
+                dispatch(setError(response.status === 404 ? 'Город не найден' : (data.message || 'Ошибка запроса')))
                 return
             }
             dispatch(setWeather(data))
